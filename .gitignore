@@ -1,3 +1,5 @@
 .DS_Store
 .history
 .vscode/
+.s/
+code/bootstrap

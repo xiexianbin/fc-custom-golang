@@ -12,13 +12,11 @@
   </a>
 </p>
 
-<description>
-
 快速部署一个基于custom runtime 的 Golang Event 类型的 Hello World 到阿里云函数计算
 
-</description>
-
-<table>
+* Invoke Event Function: `s local invoke -t s.yaml`
+* Invoke Http Function: `s local start -t s.yaml`
+* Deploy Resources: `s deploy -t s.yaml`
 
 ## 前期准备
 使用该项目，推荐您拥有以下的产品权限 / 策略：
@@ -26,8 +24,6 @@
 | 服务/业务 | 函数计算 |     
 | --- |  --- |   
 | 权限/策略 | AliyunFCFullAccess |  
-
-</table>
 
 <codepre id="codepre">
 
@@ -59,11 +55,7 @@
 
 # 应用详情
 
-
-
 本应用仅作为学习和参考使用，您可以基于本项目进行二次开发和完善，实现自己的业务逻辑
-
-
 
 </appdetail>
 
