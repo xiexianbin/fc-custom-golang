@@ -49,13 +49,18 @@ services:
       region: ${vars.region} # 关于变量的使用方法，可以参考：https://www.serverless-devs.com/serverless-devs/yaml#变量赋值
       service: ${vars.service}
       function:
+        customRuntimeConfig:
+          command:
+            - ./bootstrap
         name: beego-example
         description: 'beego by serverless devs'
         handler: index.handler
+        runtime: custom
         timeout: 30
         memorySize: 128
-        runtime: custom
-        instanceConcurrency: 5
+        caPort: 9000
+        internetAccess: true
+        instanceConcurrency: 20
         codeUri: ./code
       triggers:
         - name: httpTrigger

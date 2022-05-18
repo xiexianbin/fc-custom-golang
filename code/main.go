@@ -1,7 +1,11 @@
 package main
 
-import "github.com/astaxie/beego"
+import (
+	_ "fc-bee/routers"
+
+	beego "github.com/beego/beego/v2/server/web"
+)
 
 func main() {
-	beego.Run("0.0.0.0:9000")
+	beego.Run()
 }

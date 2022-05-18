@@ -6,7 +6,7 @@ build: build-img
 		--rm \
 		-it \
 		-v $$(pwd):/tmp xiexianbin/fc-go-runtime \
-		bash -c "cd /tmp/code/ && go mod tidy && GOARCH=amd64 go build -o /tmp/code/bootstrap /tmp/code/main.go"
+		bash -c "cd /tmp/code/ && go mod tidy && CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -o /tmp/code/bootstrap /tmp/code/main.go"
 	chmod +x code/bootstrap
 
 deploy: build
