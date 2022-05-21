@@ -1,0 +1,6 @@
+.DS_Store
+.history
+.vscode/
+code/.idea
+code/code
+code/vendor
